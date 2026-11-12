@@ -3,13 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.ragnar.ddecoradmin.ui;
-
+import com.ragnar.ddecoradmin.controllers.MenuPrincipalController;
+import com.ragnar.ddecoradmin.controllers.CheatsController;
 
 /**
  *
  * @author ragnar_DX
  */
 public class MenuPrincipalView extends javax.swing.JFrame {
+    
+    MenuPrincipalController controlMenuPrinc = new MenuPrincipalController();    
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MenuPrincipalView.class.getName());
 
@@ -40,37 +43,39 @@ public class MenuPrincipalView extends javax.swing.JFrame {
         jMenu9 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu11 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuBarra = new javax.swing.JMenuBar();
+        jMenuDefiniciones = new javax.swing.JMenu();
+        jMenuArticulos = new javax.swing.JMenu();
+        jMenuItemArticulosDef = new javax.swing.JMenuItem();
+        jMenuItemModelosDef = new javax.swing.JMenuItem();
+        jMenuItemColoresDef = new javax.swing.JMenuItem();
+        jMenuItemTipoArtDef = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItemClientesDef = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItemProveedoresDef = new javax.swing.JMenuItem();
+        jMenuMovimientos = new javax.swing.JMenu();
+        jMenuItemVentasMov = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItemCompras = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItemInventarios = new javax.swing.JMenuItem();
+        jMenuConsultas = new javax.swing.JMenu();
+        jMenuItemIngresosCon = new javax.swing.JMenuItem();
         jSeparator5 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItemEgresosCon = new javax.swing.JMenuItem();
         jSeparator6 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem15 = new javax.swing.JMenuItem();
+        jMenuItemExistenciasCon = new javax.swing.JMenuItem();
         jSeparator7 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem16 = new javax.swing.JMenuItem();
-        jMenu7 = new javax.swing.JMenu();
+        jMenuItemNominasCon = new javax.swing.JMenuItem();
+        jMenuReportes = new javax.swing.JMenu();
         jMenu12 = new javax.swing.JMenu();
         jMenuItem18 = new javax.swing.JMenuItem();
-        jMenu10 = new javax.swing.JMenu();
+        jMenuAcercaDe = new javax.swing.JMenu();
         jMenuItem19 = new javax.swing.JMenuItem();
         jMenuItem20 = new javax.swing.JMenuItem();
+        jSeparator8 = new javax.swing.JPopupMenu.Separator();
+        jMenuItemCheats = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
 
@@ -97,94 +102,99 @@ public class MenuPrincipalView extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
-        jMenu2.setText("Definiciones");
+        jMenuDefiniciones.setText("Definiciones");
 
-        jMenu11.setText("Articulos");
+        jMenuArticulos.setText("Articulos");
 
-        jMenuItem2.setText("Articulos");
-        jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
-        jMenu11.add(jMenuItem2);
+        jMenuItemArticulosDef.setText("Articulos");
+        jMenuItemArticulosDef.addActionListener(this::jMenuItemArticulosDefActionPerformed);
+        jMenuArticulos.add(jMenuItemArticulosDef);
 
-        jMenuItem5.setText("Modelos");
-        jMenu11.add(jMenuItem5);
+        jMenuItemModelosDef.setText("Modelos");
+        jMenuArticulos.add(jMenuItemModelosDef);
 
-        jMenuItem6.setText("Colores");
-        jMenuItem6.addActionListener(this::jMenuItem6ActionPerformed);
-        jMenu11.add(jMenuItem6);
+        jMenuItemColoresDef.setText("Colores");
+        jMenuItemColoresDef.addActionListener(this::jMenuItemColoresDefActionPerformed);
+        jMenuArticulos.add(jMenuItemColoresDef);
 
-        jMenuItem7.setText("Tipos de Articulo");
-        jMenu11.add(jMenuItem7);
+        jMenuItemTipoArtDef.setText("Tipos de Articulo");
+        jMenuArticulos.add(jMenuItemTipoArtDef);
 
-        jMenu2.add(jMenu11);
-        jMenu2.add(jSeparator1);
+        jMenuDefiniciones.add(jMenuArticulos);
+        jMenuDefiniciones.add(jSeparator1);
 
-        jMenuItem3.setText("Clientes");
-        jMenu2.add(jMenuItem3);
-        jMenu2.add(jSeparator2);
+        jMenuItemClientesDef.setText("Clientes");
+        jMenuDefiniciones.add(jMenuItemClientesDef);
+        jMenuDefiniciones.add(jSeparator2);
 
-        jMenuItem8.setText("Proveedores");
-        jMenu2.add(jMenuItem8);
+        jMenuItemProveedoresDef.setText("Proveedores");
+        jMenuDefiniciones.add(jMenuItemProveedoresDef);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBarra.add(jMenuDefiniciones);
 
-        jMenu3.setText("Movimientos");
+        jMenuMovimientos.setText("Movimientos");
 
-        jMenuItem9.setText("Ventas");
-        jMenu3.add(jMenuItem9);
-        jMenu3.add(jSeparator3);
+        jMenuItemVentasMov.setText("Ventas");
+        jMenuMovimientos.add(jMenuItemVentasMov);
+        jMenuMovimientos.add(jSeparator3);
 
-        jMenuItem10.setText("Compras");
-        jMenuItem10.addActionListener(this::jMenuItem10ActionPerformed);
-        jMenu3.add(jMenuItem10);
-        jMenu3.add(jSeparator4);
+        jMenuItemCompras.setText("Compras");
+        jMenuItemCompras.addActionListener(this::jMenuItemComprasActionPerformed);
+        jMenuMovimientos.add(jMenuItemCompras);
+        jMenuMovimientos.add(jSeparator4);
 
-        jMenuItem12.setText("Inventarios");
-        jMenu3.add(jMenuItem12);
+        jMenuItemInventarios.setText("Inventarios");
+        jMenuMovimientos.add(jMenuItemInventarios);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBarra.add(jMenuMovimientos);
 
-        jMenu4.setText("Consultas");
+        jMenuConsultas.setText("Consultas");
 
-        jMenuItem13.setText("Ingresos");
-        jMenu4.add(jMenuItem13);
-        jMenu4.add(jSeparator5);
+        jMenuItemIngresosCon.setText("Ingresos");
+        jMenuConsultas.add(jMenuItemIngresosCon);
+        jMenuConsultas.add(jSeparator5);
 
-        jMenuItem14.setText("Egresos");
-        jMenu4.add(jMenuItem14);
-        jMenu4.add(jSeparator6);
+        jMenuItemEgresosCon.setText("Egresos");
+        jMenuConsultas.add(jMenuItemEgresosCon);
+        jMenuConsultas.add(jSeparator6);
 
-        jMenuItem15.setText("Existencias");
-        jMenuItem15.addActionListener(this::jMenuItem15ActionPerformed);
-        jMenu4.add(jMenuItem15);
-        jMenu4.add(jSeparator7);
+        jMenuItemExistenciasCon.setText("Existencias");
+        jMenuItemExistenciasCon.addActionListener(this::jMenuItemExistenciasConActionPerformed);
+        jMenuConsultas.add(jMenuItemExistenciasCon);
+        jMenuConsultas.add(jSeparator7);
 
-        jMenuItem16.setText("Nominas");
-        jMenu4.add(jMenuItem16);
+        jMenuItemNominasCon.setText("Nominas");
+        jMenuConsultas.add(jMenuItemNominasCon);
 
-        jMenuBar1.add(jMenu4);
+        jMenuBarra.add(jMenuConsultas);
 
-        jMenu7.setText("Reportes");
+        jMenuReportes.setText("Reportes");
 
         jMenu12.setText("Articulos");
 
         jMenuItem18.setText("Listado de Articulos");
         jMenu12.add(jMenuItem18);
 
-        jMenu7.add(jMenu12);
+        jMenuReportes.add(jMenu12);
 
-        jMenuBar1.add(jMenu7);
+        jMenuBarra.add(jMenuReportes);
 
-        jMenu10.setText("Acerca De");
+        jMenuAcercaDe.setText("Acerca De");
 
         jMenuItem19.setText("Ayuda");
-        jMenu10.add(jMenuItem19);
+        jMenuAcercaDe.add(jMenuItem19);
 
         jMenuItem20.setText("Sobre el Sistema");
-        jMenu10.add(jMenuItem20);
+        jMenuAcercaDe.add(jMenuItem20);
+        jMenuAcercaDe.add(jSeparator8);
 
-        jMenuBar1.add(jMenu10);
+        jMenuItemCheats.setText("Codigos Secretos");
+        jMenuItemCheats.addActionListener(this::jMenuItemCheatsActionPerformed);
+        jMenuAcercaDe.add(jMenuItemCheats);
 
-        setJMenuBar(jMenuBar1);
+        jMenuBarra.add(jMenuAcercaDe);
+
+        setJMenuBar(jMenuBarra);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -200,21 +210,29 @@ public class MenuPrincipalView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        System.out.println("ARTICULOS TA TA TA");
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    private void jMenuItemArticulosDefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemArticulosDefActionPerformed
+        
+        controlMenuPrinc.abrirArticulosDef();
+        
+    }//GEN-LAST:event_jMenuItemArticulosDefActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void jMenuItemColoresDefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemColoresDefActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItemColoresDefActionPerformed
 
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+    private void jMenuItemComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemComprasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
+    }//GEN-LAST:event_jMenuItemComprasActionPerformed
 
-    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+    private void jMenuItemExistenciasConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExistenciasConActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem15ActionPerformed
+    }//GEN-LAST:event_jMenuItemExistenciasConActionPerformed
+
+    private void jMenuItemCheatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCheatsActionPerformed
+
+        controlMenuPrinc.abrirCheats();
+        
+    }//GEN-LAST:event_jMenuItemCheatsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,39 +261,40 @@ public class MenuPrincipalView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu10;
-    private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu12;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenu jMenu9;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuAcercaDe;
+    private javax.swing.JMenu jMenuArticulos;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JMenuBar jMenuBarra;
+    private javax.swing.JMenu jMenuConsultas;
+    private javax.swing.JMenu jMenuDefiniciones;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem19;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem20;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem jMenuItemArticulosDef;
+    private javax.swing.JMenuItem jMenuItemCheats;
+    private javax.swing.JMenuItem jMenuItemClientesDef;
+    private javax.swing.JMenuItem jMenuItemColoresDef;
+    private javax.swing.JMenuItem jMenuItemCompras;
+    private javax.swing.JMenuItem jMenuItemEgresosCon;
+    private javax.swing.JMenuItem jMenuItemExistenciasCon;
+    private javax.swing.JMenuItem jMenuItemIngresosCon;
+    private javax.swing.JMenuItem jMenuItemInventarios;
+    private javax.swing.JMenuItem jMenuItemModelosDef;
+    private javax.swing.JMenuItem jMenuItemNominasCon;
+    private javax.swing.JMenuItem jMenuItemProveedoresDef;
+    private javax.swing.JMenuItem jMenuItemTipoArtDef;
+    private javax.swing.JMenuItem jMenuItemVentasMov;
+    private javax.swing.JMenu jMenuMovimientos;
+    private javax.swing.JMenu jMenuReportes;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
@@ -283,5 +302,6 @@ public class MenuPrincipalView extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator5;
     private javax.swing.JPopupMenu.Separator jSeparator6;
     private javax.swing.JPopupMenu.Separator jSeparator7;
+    private javax.swing.JPopupMenu.Separator jSeparator8;
     // End of variables declaration//GEN-END:variables
 }
