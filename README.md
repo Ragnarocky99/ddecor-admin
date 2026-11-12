@@ -18,7 +18,7 @@
 
 * **Lenguaje:** Java 
 * **Interfaz Gráfica:** Java Swing (MVC - Modelo Vista Controlador)
-* **Base de Datos:** PostgreSQL
+* **Base de Datos:** MySQL
 * **Entorno de Desarrollo:** NetBeans
 * **Control de Versiones:** Git & GitHub
 
@@ -31,5 +31,5 @@ El proyecto está organizado bajo el patrón de arquitectura **MVC (Modelo-Vista
 ```text
 com.ragnar.ddecoradmin
  ├── controllers/     # Lógica de control e interacción con la vista
- ├── db/              # Conexiones y gestión de la base de datos PostgreSQL
+ ├── db/              # Conexiones y gestión de la base de datos MySQL
  └── ui/              # Interfaces gráficas desarrolladas en Java Swing
